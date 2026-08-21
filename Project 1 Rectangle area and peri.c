@@ -2,7 +2,6 @@
 int main(void)
 {
     
-
     int x;
     int y;
     printf("Enter the length of the rectangle\n");
