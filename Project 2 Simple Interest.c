@@ -14,14 +14,5 @@ int main(void)
     scanf("%f", &c);
 
     printf("Value of simple interest is %.2f", (a*b*c)/100);
-
-
-
-
-
-
-
-
-
-
+    return 0;
 }
