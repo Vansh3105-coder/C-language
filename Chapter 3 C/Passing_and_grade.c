@@ -45,7 +45,9 @@ int main(void)
     {
         printf("You have passed only.\n");
     }
-    
-
+    else if(p<34)
+    {   
+        printf("Unfortunately you have failed.\n");
+    }
     return 0;
 }
