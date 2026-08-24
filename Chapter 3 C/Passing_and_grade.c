@@ -25,23 +25,23 @@ int main(void)
     p = (a + b + c + d + e) / 5;
     printf("So, your percentage in 12th is %.2f\n", p);
 
-    if (p >= 40 && a>33 && b>33 && c>33 && d>33 && e>33)
+    if (p >= 40 && a>=33 && b>=33 && c>=33 && d>=33 && e>=33)
     {
         printf("Congo!, you have passed.\n");
     }
-    if (p >= 90 && a>33 && b>33 && c>33 && d>33 && e>33)
+    if (p >= 90 && a>=33 && b>=33 && c>=33 && d>=33 && e>=33)
     {
         printf("You have secured grade A.\n");
     }
-    else if (80 <= p && p < 90 && a>33 && b>33 && c>33 && d>33 && e>33)
+    else if (80 <= p && p < 90 && a>=33 && b>=33 && c>=33 && d>=33 && e>=33)
     {
         printf("You have secured grade B.\n");
     }
-    else if (70 <= p && p < 80 && a>33 && b>33 && c>33 && d>33 && e>33)
+    else if (70 <= p && p < 80 && a>=33 && b>=33 && c>=33 && d>=33 && e>=33)
     {
         printf("You have secured grade C.\n");
     }
-    else if (40 < p && p < 70 && a>33 && b>33 && c>33 && d>33 && e>33)
+    else if (40 <= p && p < 70 && a>=33 && b>=33 && c>=33 && d>=33 && e>=33)
     {
         printf("You have passed only.\n");
     }
