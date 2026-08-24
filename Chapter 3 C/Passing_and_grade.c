@@ -25,29 +25,45 @@ int main(void)
     p = (a + b + c + d + e) / 5;
     printf("So, your percentage in 12th is %.2f\n", p);
 
-    if (p >= 34)
+    if (p >= 40 && a>33 && b>33 && c>33 && d>33 && e>33)
     {
         printf("Congo!, you have passed.\n");
     }
-    if (p >= 90)
+    if (p >= 90 && a>33 && b>33 && c>33 && d>33 && e>33)
     {
         printf("You have secured grade A.\n");
     }
-    else if (80 <= p && p < 90)
+    else if (80 <= p && p < 90 && a>33 && b>33 && c>33 && d>33 && e>33)
     {
         printf("You have secured grade B.\n");
     }
-    else if (70 <= p && p < 80)
+    else if (70 <= p && p < 80 && a>33 && b>33 && c>33 && d>33 && e>33)
     {
         printf("You have secured grade C.\n");
     }
-    else if (34 <= p && p < 70)
+    else if (40 < p && p < 70 && a>33 && b>33 && c>33 && d>33 && e>33)
     {
         printf("You have passed only.\n");
     }
-    else if(p<34)
+    else if(p<40 || a<33 || b<33 || c<33 || d<33 || e<33)
     {   
         printf("Unfortunately you have failed.\n");
+        if (a<33){
+            printf("You have failed in English.\n");
+        }
+        if (b<33){
+            printf("You have failed in Physics.\n");
+        }
+        if (c<33){
+            printf("You have failed in Chemistry.\n");
+        }
+        if (d<33){
+            printf("You have failed in Mathematics.\n");
+        }
+        if (e<33){
+            printf("You have failed in your 5th subject.\n");
+        }
+
     }
     return 0;
 }
