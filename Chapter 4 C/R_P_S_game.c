@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <conio.h>
+#include <ctype.h>
 int main(void)
 {
     printf("Welcome to the Game of Rock, paper and scissors.\n");
@@ -21,32 +22,32 @@ int main(void)
         printf("Now player 2 will choose:\n");
         b = getch();
 
-        if (a == 'R' && b == 'P')
+        if (toupper(a) == 'R' && toupper(b) == 'P')
         {
             printf("Congratulations, Player 2 has won the game!!\n");
             score2++;
         }
-        else if (a == 'P' && b == 'S')
+        else if (toupper(a) == 'P' && toupper(b) == 'S')
         {
             printf("Congratulations, Player 2 has won the game!!\n");
             score2++;
         }
-        else if (a == 'S' && b == 'R')
+        else if (toupper(a) == 'S' && toupper(b) == 'R')
         {
             printf("Congratulations, Player 2 has won the game!!\n");
             score2++;
         }
-        else if (a == 'R' && b == 'S')
+        else if (toupper(a) == 'R' && toupper(b) == 'S')
         {
             printf("Congratulations, Player 1 has won the game!!\n");
             score1++;
         }
-        else if (a == 'P' && b == 'R')
+        else if (toupper(a) == 'P' && toupper(b) == 'R')
         {
             printf("Congratulations, Player 1 has won the game!!\n");
             score1++;
         }
-        else if (a == 'S' && b == 'P')
+        else if (toupper(a) == 'S' && toupper(b) == 'P')
         {
             printf("Congratulations, Player 1 has won the game!!\n");
             score1++;

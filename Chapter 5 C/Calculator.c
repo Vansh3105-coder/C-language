@@ -107,9 +107,15 @@ int main(void)
             scanf("%f", &t);
             tangent_inv(t);
         }
-        
-        printf("Want to use the calculator again?(0/1)\n");
-        scanf("%d",&e);
+        do
+        {
+            printf("Want to use the calculator again?(0 for no/1 for yes)\n");
+            scanf("%d",&e);
+            if(e>1 || e<0)
+            {
+                printf("Please enter only 0 or 1.\n");
+            }       
+        }while(e!=0 && e!=1);
 
     }while(e==1);
 
@@ -117,7 +123,6 @@ int main(void)
 return 0;   
 }
     
-
 
 
 // Function definition
@@ -143,7 +148,7 @@ float division(float a, float b)
 {
     if (b == 0)
     {
-        printf("The division is invalid, please choosed another number instead of 0.\n");
+        printf("The division is invalid, please choose another number instead of 0.\n");
     }
     else
     {
