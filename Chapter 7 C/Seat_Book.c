@@ -18,6 +18,7 @@ int main(void)
         if(seat_num[preferred_seat-1]==0)
         {
             printf("This seat is available.\n");
+            seat_num[preferred_seat-1]=1;
             printf("We have successfully booked this seat for you.\n");
         }
         else
