@@ -6,19 +6,30 @@ int main(void)
 {
     int seat_num[20] = {0,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,0,0,0,1};
     int preferred_seat;
+    int choice;
     printf("==================Welcome=================\n");
-    printf("Enter your preferred seat number: ");
-    scanf("%d", &preferred_seat);
-    // Core Logic 
-    if(seat_num[preferred_seat-1]==0)
+
+
+    do
     {
-        printf("This seat is available.\n");
-        printf("We have successfully booked this seat for you.\n");
-        printf("Thanks for your arrival.\n");
-        printf("=============See you next time=============\n");
-    }
-    else
-    {
-        printf("Sadly, the seat you are willing for is already booked.\n");
-    }
+        printf("Enter your preferred seat number: ");
+        scanf("%d", &preferred_seat);
+        // Core Logic 
+        if(seat_num[preferred_seat-1]==0)
+        {
+            printf("This seat is available.\n");
+            printf("We have successfully booked this seat for you.\n");
+        }
+        else
+        {
+            printf("Sadly, the seat you are willing for is already booked.\n");
+        }
+        printf("Do you want to book another seat? (0 for no / 1 for yes)\n");
+        scanf("%d", &choice);
+
+    }while(choice == 1);
+    printf("Thank you for visiting us.\n");
+    printf("May you have a great experience with us.\n");
+    printf("=============See you next time=============\n");
+    
 }
