@@ -1,5 +1,5 @@
 #include <stdio.h>
-int askquestion(char ques[], char o1[], char o2[], char o3[], char o4[]); // Function prototype
+void askquestion(char ques[], char o1[], char o2[], char o3[], char o4[]); // Function prototype
 
 int main(void)
 {
@@ -25,13 +25,12 @@ int main(void)
             score++;
         }
     }
-    printf("%d",score);
-
+    printf("Your final score is %d\n", score);
 }
 
 
 // Function definition
-int askquestion(char ques[], char o1[], char o2[], char o3[], char o4[])
+void askquestion(char ques[], char o1[], char o2[], char o3[], char o4[])
 {
     printf("%s\n", ques);
     printf("1) %s\n", o1);
