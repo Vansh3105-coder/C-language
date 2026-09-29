@@ -12,19 +12,33 @@ int main(void)
 
     do
     {
-        printf("Enter your preferred seat number: ");
-        scanf("%d", &preferred_seat);
-        // Core Logic 
-        if(seat_num[preferred_seat-1]==0)
+        do
         {
-            printf("This seat is available.\n");
-            seat_num[preferred_seat-1]=1;
-            printf("We have successfully booked this seat for you.\n");
-        }
-        else
-        {
-            printf("Sadly, the seat you are willing for is already booked.\n");
-        }
+            do
+            {
+                printf("Enter your preferred seat number: ");
+                scanf("%d", &preferred_seat);
+                
+                if(preferred_seat < 21 && preferred_seat > 0)
+                {
+                    if(seat_num[preferred_seat-1]==0)
+                    {
+                        printf("This seat is available.\n");
+                        printf("We have successfully booked this seat for you.\n");
+                    }
+                    else
+                    {
+                        printf("Sadly, the seat you are willing for is already booked.\n");
+                    }
+                }
+                else
+                {
+                    printf("Invalid entry.\n");
+                }
+            }while(preferred_seat > 20 || preferred_seat < 0);
+
+        }while(seat_num[preferred_seat-1]!=0);
+        seat_num[preferred_seat-1]=1;
         printf("Do you want to book another seat? (0 for no / 1 for yes)\n");
         scanf("%d", &choice);
 
