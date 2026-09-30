@@ -35,7 +35,12 @@ int main(void)
             printf("You have only %d attempts left.\n",3-attempt);
         }
     }while(correct!=1);
-
-
-
+    if(correct==1)
+    {
+        printf("==========Dashboard==========\n");
+        printf("Name: Vansh\n");
+        printf("Branch: CSE\n");
+        printf("Semester: First\n");
+        printf("Lab Group: A1\n");
+    }
 }
