@@ -5,7 +5,7 @@
 int main(void)
 {
     int game[3][3] = {1,2,3,4,5,6,7,8,9};
-    int i=0, j=0, position_1, position_2;
+    int i=0, j=0, position_1, position_2, win=0;
 
     // Printing the outline of the game board.
     printf("Here, take a look at your board.\n");
@@ -58,8 +58,6 @@ int main(void)
                 printf("%c  ", game[i][j]);
             }
             printf("\n");
-            
-      
         }
         for(int i=0; i<3; i++)
         {
@@ -70,13 +68,17 @@ int main(void)
             if(game[i][0]=='O' && game[i][1]=='O' &&game[i][2]=='O')
             {
                 printf("%s is the winner.\n",p1);
-                break;
+                win=1;
             }
             else if(game[i][0]=='X' && game[i][1]=='X' &&game[i][2]=='X')
             {
                 printf("%s is the winner.\n",p2);
-                break;
+                win=1;
             }
+        }
+        if(win==1)
+        {
+            break;
         }
         for(int j=0; j<3; j++)
         {
@@ -87,33 +89,45 @@ int main(void)
             if(game[0][j]=='O' && game[1][j]=='O' &&game[2][j]=='O')
             {
                 printf("%s is the winner.\n",p1);
-                break;
+                win=1;
             }
             else if(game[0][j]=='X' && game[1][j]=='X' &&game[2][j]=='X')
             {
                 printf("%s is the winner.\n",p2);
-                break;
+                win=1;
             }
+        }
+        if(win==1)
+        {
+            break;
         }
         if(game[0][0]=='O' && game[1][1]=='O' && game[2][2]=='O')
         {
             printf("%s is the winner.\n",p1);
+            win=1;
             break;
         }
         else if(game[0][0]=='X' && game[1][1]=='X' && game[2][2]=='X')
         {
             printf("%s is the winner.\n",p2);
+            win=1;
             break;
         }
         if(game[0][2]=='O' && game[1][1]=='O' && game[2][0]=='O')
         {
             printf("%s is the winner.\n",p1);
+            win=1;
             break;
         }
         else if(game[0][2]=='X' && game[1][1]=='X' && game[2][0]=='X')
         {
             printf("%s is the winner.\n",p2);
+            win=1;
             break;
         }
-    } 
+    }
+    if(win!=1)
+    {
+        printf("Nobody won. The game has tied.\n");
+    }
 }
